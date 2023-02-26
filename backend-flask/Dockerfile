@@ -1,5 +1,7 @@
 FROM python:3.10-slim-buster
 
+RUN apt-get -y update; apt-get -y install curl
+
 WORKDIR /backend-flask
 
 COPY requirements.txt requirements.txt
