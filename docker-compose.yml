@@ -8,7 +8,7 @@ services:
     ports:
       - "4567:4567"
     volumes:
-      - ./backend-flask:/backend-flask
+      - ./backend-flask:/home/app/backend-flask
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:4567/api/activities/notifications"]
       interval: 60s
