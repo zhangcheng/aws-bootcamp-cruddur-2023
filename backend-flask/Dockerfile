@@ -1,6 +1,6 @@
-FROM python:3.10-slim-buster
+FROM python:3.10-buster
 
-RUN apt-get -y update; apt-get -y install curl
+RUN apt-get -y update; apt-get -y install curl sudo postgresql-client libpq-dev
 
 RUN useradd -rm -s /bin/bash -g root -G sudo -u 1001 --no-log-init app
 USER app
